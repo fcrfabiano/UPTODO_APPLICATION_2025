@@ -1,27 +1,32 @@
 {
-  "name": "uptodo_application_2025",
-  "version": "1.0.0",
-  "main": "index.ts",
-  "scripts": {
-    "start": "expo start",
-    "android": "expo start --android",
-    "ios": "expo start --ios",
-    "web": "expo start --web"
-  },
-  "dependencies": {
-    "expo": "~54.0.18",
-    "expo-status-bar": "~3.0.8",
-    "nativewind": "^4.2.1",
-    "prettier-plugin-tailwindcss": "^0.5.11",
-    "react": "19.1.0",
-    "react-native": "0.81.5",
-    "react-native-reanimated": "~3.17.4",
-    "react-native-safe-area-context": "^5.4.0",
-    "tailwindcss": "^3.4.17"
-  },
-  "devDependencies": {
-    "@types/react": "~19.1.0",
-    "typescript": "~5.9.2"
-  },
-  "private": true
+    "name": "uptodo_application_2025",
+    "version": "1.0.0",
+    "main": "index.ts",
+    "scripts": {
+        "start": "expo start",
+        "android": "expo start --android",
+        "ios": "expo start --ios",
+        "web": "expo start --web"
+    },
+    "dependencies": {
+        "@expo-google-fonts/lato": "^0.4.1",
+        "expo": "~54.0.17",
+        "expo-font": "~13.3.2",
+        "expo-splash-screen": "~0.30.10",
+        "expo-status-bar": "~2.2.3",
+        "nativewind": "^4.1.23",
+        "prettier-plugin-tailwindcss": "^0.5.14",
+        "react": "19.0.0",
+        "react-native": "0.79.5",
+        "react-native-reanimated": "~3.17.4",
+        "react-native-safe-area-context": "^5.4.0",
+        "react-native-worklets": "0.5.1",
+        "tailwindcss": "^3.4.17"
+    },
+    "devDependencies": {
+        "@babel/core": "^7.25.2",
+        "@types/react": "~19.0.10",
+        "typescript": "~5.8.3"
+    },
+    "private": true
 }
