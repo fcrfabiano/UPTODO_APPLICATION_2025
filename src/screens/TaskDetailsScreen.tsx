@@ -18,12 +18,12 @@ export default function TaskDetailsScreen({ route, navigation }: any) {
     };
 
     return (
-        <View className="p-4">
-            <Text className="font-bold text-xl">{task.title}</Text>
-            {task.description ? <Text className="mt-2">{task.description}</Text> : null}
-            {task.imageUri ? <Image source={{ uri: task.imageUri }} className="w-full h-56 mt-3 rounded-lg"/> : null}
+        <View className="flex-1 p-4 bg-gray-700">
+            <Text className="font-sans-regular text-white text-3xl">{task.title}</Text>
+            {task.description ? <Text className="font-sans-regular text-white text-xl mt-2">{task.description}</Text> : null}
+            {task.imageUri ? <Image source={{ uri: task.imageUri }} className="w-full h-56 mt-3 rounded-lg" /> : null}
             {typeof task.latitude === 'number' && typeof task.longitude === 'number' ? (
-                <Text className="mt-2">Lat: {task.latitude.toFixed(6)} Lon: {task.longitude.toFixed(6)}</Text>
+                <Text className="font-sans-regular text-white text-base mt-2">Latitude: {task.latitude.toFixed(6)} | Longitude: {task.longitude.toFixed(6)}</Text>
             ) : null}
 
             <View className="mt-4">
