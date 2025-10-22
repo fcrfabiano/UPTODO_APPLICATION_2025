@@ -1,14 +1,14 @@
 import { StatusBar } from 'expo-status-bar';
 import { Text, View } from 'react-native';
 import * as SplashScreen from 'expo-splash-screen';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { Lato_400Regular, Lato_700Bold, useFonts } from '@expo-google-fonts/lato';
+import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { useEffect } from 'react';
 
 import './styles/global.css';
-import { SafeAreaProvider } from 'react-native-safe-area-context';
 
-import { NavigationContainer } from '@react-navigation/native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import TaskListScreen from './screens/TaskListScreen';
 import TaskFormScreen from './screens/TaskFormScreen';
 import TaskDetailsScreen from './screens/TaskDetailsScreen';
@@ -37,7 +37,7 @@ export default function App() {
     return (
         <TaskProvider>
             <StatusBar style="dark" />
-            <View className="flex-1 bg-black-700">
+            <View className="flex-1 bg-gray-700">
                 <SafeAreaProvider>
                     <NavigationContainer>
                         <Stack.Navigator>
