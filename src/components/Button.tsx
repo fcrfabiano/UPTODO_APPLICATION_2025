@@ -7,9 +7,9 @@ export const Button: React.FC<{ title: string; onPress: () => void; style?: any 
     return (
         <TouchableOpacity
             onPress={onPress}
-            className={ getClassNames('p-3 bg-[#0066cc] rounded-lg items-center', style ) }
+            className={ getClassNames('p-3 bg-support-primary rounded-lg items-center', style ) }
         >
-            <Text className="text-white font-semibold">{title}</Text>
+            <Text className="text-white font-sans-regular text-base">{title}</Text>
         </TouchableOpacity>
     );
 };
