@@ -59,6 +59,8 @@ export default function TaskFormScreen({ navigation, route }: any) {
             const uri = await takePhoto();
             if (uri) setImageUri(uri);
         } catch (e) {
+
+            console.log(e)
             Alert.alert('Permissão negada ou erro ao abrir câmera');
         }
     };
@@ -84,7 +86,9 @@ export default function TaskFormScreen({ navigation, route }: any) {
                 <Button title="Tirar foto" onPress={onTake} />
             </View>
 
-            {imageUri ? <Image source={{ uri: imageUri }} className="w-full h-56 rounded-lg" /> : null}
+            {imageUri && imageUri.startsWith('file') ? (
+                <Image source={{ uri: imageUri }} className="w-full h-56 rounded-lg" />
+            ) : null}
 
             <View className="my-3">
                 <Button title="Capturar localização" onPress={onGetLocation} />
