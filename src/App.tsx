@@ -14,6 +14,7 @@ import TaskListScreen from './screens/TaskListScreen';
 import TaskFormScreen from './screens/TaskFormScreen';
 import TaskDetailsScreen from './screens/TaskDetailsScreen';
 import { TaskProvider } from './context/TaskContext';
+import { colors } from './styles/colors';
 
 const Stack = createNativeStackNavigator();
 
@@ -42,7 +43,13 @@ export default function App() {
                 <View className="flex-1 bg-gray-700">
                     <SafeAreaProvider>
                         <NavigationContainer>
-                            <Stack.Navigator>
+                            <Stack.Navigator
+                                screenOptions={{
+                                    headerStyle: { backgroundColor: colors.gray[700] },
+                                    headerTintColor: colors.white.DEFAULT,
+                                    headerTitleStyle: { fontFamily: 'Lato', fontWeight: 700, fontSize: 24 }
+                                }}
+                            >
                                 <Stack.Screen name="List" component={TaskListScreen} options={{ title: 'Tarefas' }} />
                                 <Stack.Screen name="Form" component={TaskFormScreen} options={{ title: 'Criar / Editar' }} />
                                 <Stack.Screen name="Details" component={TaskDetailsScreen} options={{ title: 'Detalhes' }} />
