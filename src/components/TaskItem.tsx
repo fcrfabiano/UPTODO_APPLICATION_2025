@@ -8,17 +8,17 @@ export const TaskItem: React.FC<{ task: Task; onPress: () => void; onToggle: () 
     return (
         <TouchableOpacity
             onPress={onPress}
-            className="flex-row p-3 items-center border-b border-[#eee]"
+            className="flex-row p-3 items-center bg-gray-500"
         >
             <TouchableOpacity
                 onPress={onToggle}
-                className={getClassNames('size-7 rounded-md border border-[#666] items-center justify-center', task.completed && 'bg-color-[#0066cc] border-[#0066cc]')}
+                className={getClassNames('size-6 rounded-full border-[1.5px] border-white items-center justify-center', task.completed && 'bg-color-support-primary border-support-primary')}
             >
-                {task.completed && <Text className="text-white">✓</Text>}
+                {task.completed && <View className="bg-support-primary size-4 rounded-full"></View>}
             </TouchableOpacity>
             <View className="ml-3 flex-1">
                 <Text
-                    className={getClassNames('text-base font-semibold', task.completed && 'line-through text-[#999]')}
+                    className={getClassNames('text-base font-sans-regular text-white tracking-[-0.32px]', task.completed && 'line-through text-support-primary')}
                 >{task.title}</Text>
                 {task.imageUri ? <Image source={{ uri: task.imageUri }} className="mt-2 w-20 h-16 rounded-md" /> : null}
             </View>
