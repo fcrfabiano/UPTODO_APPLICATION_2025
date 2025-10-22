@@ -10,7 +10,8 @@ module.exports = {
             },
             colors: {
                 black: {
-                    DEFAULT: '#000'
+                    DEFAULT: '#000',
+                    700: '#121212'
                 }
             },
         },
