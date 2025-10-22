@@ -3,7 +3,7 @@ import { View, Text, TouchableOpacity, Image, StyleSheet, Animated } from 'react
 import { Task } from '../types';
 import { getClassNames } from '../utils/getClassNames';
 import { formatDate } from '../utils/formatDate';
-import { Pencil, Trash2 } from 'lucide-react-native';
+import { Eye, Trash2 } from 'lucide-react-native';
 import { Swipeable, RectButton } from 'react-native-gesture-handler';
 import { colors } from '../styles/colors';
 
@@ -26,7 +26,7 @@ export const TaskItem: React.FC<TaskItemProps> = ({ task, onEdit, onToggle, onDe
                     onPress={onEdit}
                     style={styles.gestureButton}
                 >
-                    <Pencil color={colors.support.primary} size={20} />
+                    <Eye color={colors.support.primary} size={20} />
                 </RectButton>
                 <RectButton
                     onPress={onDelete}
