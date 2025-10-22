@@ -2,7 +2,7 @@
 
 Aplicativo de tarefas simples desenvolvido em React Native com persistência local usando AsyncStorage.
 
---
+---
 
 ## 1. Como instalar e rodar o projeto
 
@@ -35,7 +35,7 @@ yarn ios
 
 Certifique-se de ter o Expo CLI instalado globalmente (`npm install -g expo-cli`) e um emulador ou dispositivo físico configurado.
 
---
+---
 
 ## 2. Tecnologias e bibliotecas escolhidas
 
@@ -50,7 +50,7 @@ Certifique-se de ter o Expo CLI instalado globalmente (`npm install -g expo-cli`
 
 A escolha dessas bibliotecas se deu pelo equilíbrio entre *facilidade de uso*, *performance e manutenção futura*.
 
---
+---
 
 ## 3. Como implementei a persistência
 
@@ -75,7 +75,7 @@ useEffect(() => {
 - *Atualização de estado complexo*: para atualizar ou deletar tarefas, precisei iterar cuidadosamente sobre o array sem quebrar a imutabilidade.
 - *Sincronização de data/hora*: ao atualizar tarefas, o campo `updatedAt` é atualizado automaticamente.
 
---
+---
 
 ## 5. O que faria diferente com mais tempo
 
