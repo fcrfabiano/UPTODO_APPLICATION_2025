@@ -7,4 +7,5 @@ export type Task = {
     latitude?: number;
     longitude?: number;
     createdAt: string; // ISO string
+    updatedAt?: string; // ISO string
     };
