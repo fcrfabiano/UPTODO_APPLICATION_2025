@@ -8,7 +8,7 @@ import { colors } from '../styles/colors';
 import { ListEmpty } from '../components/ListEmpty';
 
 export default function TaskListScreen({ navigation }: any) {
-    const { state, toggleTask } = useTasks();
+    const { state, toggleTask, deleteTask } = useTasks();
     const [filter, setFilter] = useState<'all' | 'active' | 'completed'>('all');
 
     const tasks = useMemo(() => {
@@ -46,8 +46,9 @@ export default function TaskListScreen({ navigation }: any) {
                 renderItem={({ item }) => (
                     <TaskItem
                         task={item}
-                        onPress={() => navigation.navigate('Details', { id: item.id })}
+                        onEdit={() => navigation.navigate('Details', { id: item.id })}
                         onToggle={() => toggleTask(item.id)}
+                        onDelete={() => deleteTask(item.id)}
                     />
                 )}
             />
