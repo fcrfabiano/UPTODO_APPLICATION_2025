@@ -3,9 +3,6 @@ export const colors = {
         DEFAULT: '#000',
         700: '#121212'
     },
-    white: {
-        DEFAULT: '#fff'
-    },
     gray: {},
     support: {}
 };
