@@ -7,7 +7,7 @@ export async function pickImageFromGallery() {
   if (!permission.granted) throw new Error('Permission denied');
 
   const result = await ImagePicker.launchImageLibraryAsync({
-    mediaTypes: ImagePicker.MediaTypeOptions.Images,
+    mediaTypes: ['images'],
     quality: 0.7,
     allowsEditing: true,
   });

@@ -25,8 +25,8 @@ export default function TaskDetailsScreen({ route, navigation }: any) {
             <Text className="font-sans-regular text-white text-3xl">{task.title}</Text>
             {
                 task.description
-                ? <Text className="font-sans-regular text-white text-xl mt-2">{task.description}</Text>
-                : null
+                    ? <Text className="font-sans-regular text-white text-xl mt-2">{task.description}</Text>
+                    : null
             }
             {
                 task.imageUri ?
@@ -48,27 +48,27 @@ export default function TaskDetailsScreen({ route, navigation }: any) {
 
             <View className="flex-row justify-between items-center mt-4">
                 <View className="flex-row gap-2">
-                    <Clock color={colors.white.DEFAULT}/>
+                    <Clock color={colors.white.DEFAULT} />
                     <Text className="text-white/85 font-sans-regular text-base">
                         Data de criação:
                     </Text>
                 </View>
-                <Button style="bg-white/20" title={formatDate(task.createdAt)} onPress={() => {}} />
+                <Button style="bg-white/20" title={formatDate(task.createdAt)} onPress={() => { }} />
             </View>
 
             <View className="flex-row justify-between items-center mt-4">
                 <View className="flex-row gap-2">
-                    <Clock color={colors.white.DEFAULT}/>
+                    <Clock color={colors.white.DEFAULT} />
                     <Text className="text-white/85 font-sans-regular text-base">
                         Última modificação:
                     </Text>
                 </View>
-                <Button style="bg-white/20" title={task.updatedAt ? formatDate(task.updatedAt) : ''} onPress={() => {}} />
+                <Button style="bg-white/20" title={task.updatedAt ? formatDate(task.updatedAt) : ''} onPress={() => { }} />
             </View>
 
             <View className="flex-row justify-between items-center mt-4">
                 <View className="flex-row gap-2">
-                    <Flag color={colors.white.DEFAULT}/>
+                    <Flag color={colors.white.DEFAULT} />
                     <Text className="text-white/85 font-sans-regular text-base">
                         Status:
                     </Text>
@@ -78,12 +78,12 @@ export default function TaskDetailsScreen({ route, navigation }: any) {
 
             <View className="mt-3 flex-row justify-between items-center">
                 <TouchableOpacity className="mt-3 flex-row gap-3" onPress={onDelete}>
-                    <Trash2 color={colors.support.error} size={24}/>
+                    <Trash2 color={colors.support.error} size={24} />
                     <Text className="font-sans-regular text-base text-support-error">Deletar tarefa</Text>
                 </TouchableOpacity>
 
                 <TouchableOpacity className="mt-3 flex-row gap-3" onPress={() => navigation.navigate('Form', { id })}>
-                    <Pencil color={colors.support.primary} size={24}/>
+                    <Pencil color={colors.support.primary} size={24} />
                     <Text className="font-sans-regular text-base text-support-primary">Editar tarefa</Text>
                 </TouchableOpacity>
             </View>
