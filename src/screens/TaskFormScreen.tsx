@@ -73,10 +73,9 @@ export default function TaskFormScreen({ navigation, route }: any) {
     };
 
     return (
-        <ScrollView className="p-4">
+        <ScrollView className="p-4 bg-gray-700">
             <Input value={title} onChangeText={setTitle} placeholder="Título (obrigatório)" />
             <Input value={description} onChangeText={setDescription} placeholder="Descrição (opcional)" multiline />
-
 
             <View className="my-3">
                 <Button title="Escolher da galeria" onPress={onPick} />
@@ -85,15 +84,12 @@ export default function TaskFormScreen({ navigation, route }: any) {
                 <Button title="Tirar foto" onPress={onTake} />
             </View>
 
-
-            {imageUri ? <Image source={{ uri: imageUri }} className="w-full h-56 rounded-lg"/> : null}
-
+            {imageUri ? <Image source={{ uri: imageUri }} className="w-full h-56 rounded-lg" /> : null}
 
             <View className="my-3">
                 <Button title="Capturar localização" onPress={onGetLocation} />
-                {location ? <Text className="my-2">Lat: {location.latitude.toFixed(6)} Lon: {location.longitude.toFixed(6)}</Text> : null}
+                {location ? <Text className="font-sans-regular text-white text-base my-2">Latitude: {location.latitude.toFixed(6)} | Longitude: {location.longitude.toFixed(6)}</Text> : null}
             </View>
-
 
             <View className="my-4">
                 <Button title="Salvar" onPress={onSave} />
